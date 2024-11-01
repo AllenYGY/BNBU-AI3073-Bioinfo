@@ -97,4 +97,3 @@ pheatmap(cor(countData),
          color = hcl.colors(50, "BluYl"))  # Corrected color argument
 
 ```
-
