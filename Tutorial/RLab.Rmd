@@ -1,0 +1,63 @@
+
+1. Use R to stimulate DNA sequence, GC content calculation and reverse complement sequence generation
+
+a)  Write an 'R' function to generate a random DNA sequence of length N. The DNA sequence should contain only the four nucleotides A, T, C and G. The function should take one input argument N, which is the length of the DNA sequence. The function should return the DNA sequence as a character vector. (Hint: use the function `sample`)
+
+```{r,cache=TRUE}
+generate_dna_sequence <- function(N) {
+  nucleotides <- c("A", "T", "C", "G")
+  sequence <- sample(nucleotides, N, replace = TRUE)
+  return(paste(sequence, collapse = ""))
+}
+generate_dna_sequence(10)
+```
+
+b)  Use the function in a) to generate 20 random DNA sequences of length 30, and write them into a file called 'DNA.fasta', where each sequence is in the FASTA format. (Hint: use the function paste0, writeLines and write.table)
+
+```{r,cache=TRUE}
+
+```
+
+c)  Generate 2 random DNA sequences of length 10, and merge them into one sequence. (Hint: use the function paste0)
+
+```{r,cache=TRUE}
+
+```
+
+d)  Read the fasta file generated in b) into R, and calculate the GC content of each sequence. (Hint: use package BioStrings::readDNAStringSet)
+
+```{r,cache=TRUE}
+
+```
+
+e)  Read the fasta file generated in b) into R, and calculate the reverse complement of each sequence. (Hint: use the function BioStrings::reverseComplement)
+
+```{r,cache=TRUE}
+
+```
+
+2. Use R to analyze FPKM matrix and generating heatmap
+
+a)  Download the FPKM file "GSE174771.partial.FPKN.txt" from iSpace, read it into R. The file contains the FPKM values of 399 genes in 34 samples. The first column is the gene names, and the rest of the columns are the FPKM values of the 34 samples. (Hint: use the function read.table)
+
+```{r,cache=TRUE}
+
+```
+
+b)  Calculate the mean FPKM value of each gene, and write the results into a file called "mean.FPKM.txt". (Hint: use the function apply and write.table)
+
+```{r,cache=TRUE}
+
+```
+
+c) Use log10(FPKM+1) to transform the FPKM values
+
+```{r,cache=TRUE}
+
+```
+
+d)  Draw a heatmap of the FPKM values of the 4000 genes in the 34 samples. (Hint: please install the package "pheatmap" first, and use the function pheatmap)
+
+```{r,cache=TRUE}
+
+```

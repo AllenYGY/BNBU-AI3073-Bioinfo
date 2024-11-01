@@ -1,0 +1,92 @@
+---
+output: pdf_document
+---
+
+# Lab-2
+
+## Load Dataset
+
+In this step, we load the raw counts and sample mapping data for further analysis.
+
+```{r,cache=TRUE}
+rawCounts <- read.delim("E-GEOD-50760-raw-counts.tsv")
+sampleData <- read.delim("E-GEOD-50760-experiment-design.tsv") 
+```
+
+```{r,cache=TRUE}
+# Prepare countData and colData
+countData <- subset(rawCounts, select = -c(Gene.Name, Gene.ID))
+rownames(countData) <- rawCounts$Gene.ID
+
+colData <- data.frame(condition = sampleData$Sample.Characteristic.biopsy.site.)
+rownames(colData) <- sampleData$Run
+```
+
+## Differential Expression Analysis using DESeq2
+
+Read the DESeq2 manual for reference: DESeq2 Manual
+
+```{r warning=FALSE, paged.print=TRUE, r,cache=TRUE}
+# Load DESeq2
+library(DESeq2)
+# Create DESeq2 dataset
+dds <- DESeqDataSetFromMatrix(countData = countData,
+                              colData = colData,
+                              design = ~condition)
+
+# Run DESeq2 to identify differentially expressed genes
+dds <- DESeq(dds)
+res <- results(dds)
+
+# Summary of results
+summary(res)
+```
+
+```{r,cache=TRUE}
+# Filter and save DE genes by p-value
+DE_genes <- subset(res, padj < 0.05)
+write.csv(as.data.frame(DE_genes), file = "DE_genes.csv")  # Save as .csv
+```
+
+## Gene Set Enrichment Analysis
+
+Identify functional enrichment of the DE genes using clusterProfiler and org.Hs.eg.db packages.
+
+```{r,cache=TRUE}
+# Load necessary libraries
+library(clusterProfiler)
+library(org.Hs.eg.db)
+
+# Gene set enrichment analysis
+gene_id_list <- rownames(DE_genes)
+GO_result <- enrichGO(gene_id_list,
+                      OrgDb = org.Hs.eg.db,
+                      ont = "ALL",
+                      pvalueCutoff = 0.05,
+                      pAdjustMethod = "BH",
+                      keyType = 'ENSEMBL')
+
+# Plotting gene set enrichment results
+dotplot(GO_result, x = "GeneRatio", color = "p.adjust", showCategory = 20, title = "Gene Ontology Dotplot")
+barplot(GO_result, x = "GeneRatio", color = "p.adjust", showCategory = 20, title = "Gene Ontology Barplot")
+cnetplot(GO_result, showCategory = 10)
+```
+
+## Hierarchical Clustering and Heatmap
+
+Apply hierarchical clustering to genes and generate a heatmap.
+
+```{r,cache=TRUE}
+# Load pheatmap
+library(pheatmap)
+
+# Create heatmap
+pheatmap(cor(countData),
+         annotation = colData,
+         cluster_cols = FALSE,
+         color = hcl.colors(50, "BluYl"))  # Adjust color for heatmap
+```
+
+```{r}
+library(rmarkdown)
+```

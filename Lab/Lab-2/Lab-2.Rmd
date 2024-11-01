@@ -1,0 +1,99 @@
+```{r,cache=TRUE}
+rawCounts <- read.delim("E-GEOD-50760-raw-counts.tsv")
+sampleData <- read.delim("E-GEOD-50760-experiment-design.tsv") 
+```
+
+```{r,cache=TRUE}
+countData <- subset(rawCounts,select= -c(Gene.Name,Gene.ID))
+rownames(countData) <- rawCounts$Gene.ID
+```
+
+```{r,cache=TRUE}
+colData <- data.frame(condition = sampleData$Sample.Characteristic.biopsy.site.)
+rownames(colData)<-sampleData$Run
+```
+
+```{r,cache=TRUE}
+library(DESeq2)
+```
+
+```{r,cache=TRUE}
+dds <- DESeqDataSetFromMatrix(countData = countData,
+                              colData = colData,
+                              design = ~condition)
+```
+
+```{r,cache=TRUE}
+dds 
+```
+
+```{r,cache=TRUE}
+dds <- DESeq(dds)
+res <- results(dds)
+```
+
+```{r,cache=TRUE}
+summary(res)
+```
+
+```{r,cache=TRUE}
+BiocManager::install('clusterProfiler')
+library(clusterProfiler)
+BiocManager::install("org.Hs.eg.db")
+library(org.Hs.eg.db)
+```
+
+```{r,cache=TRUE}
+
+gene_id_list <- rownames(subset(res, padj < 0.05))
+
+```
+
+```{r,cache=TRUE}
+GO_result <- enrichGO(gene_id_list,
+                      OrgDb = org.Hs.eg.db,
+                      ont = "ALL",
+                      pvalueCutoff = 0.05,
+                      pAdjustMethod = "BH",  # Corrected argument
+                      keyType = 'ENSEMBL')
+```
+
+```{r,cache=TRUE}
+dotplot(GO_result,
+        x= "GeneRatio",
+        color ="p.adjust",
+        showCategory =20,
+        size=NULL,
+        title="Lab 2 Data")
+
+```
+
+```{r,cache=TRUE}
+barplot(GO_result,
+        x= "GeneRatio",
+        color ="p.adjust",
+        showCategory =20,
+        size=NULL,
+        title="Lab 2 Data")
+
+```
+
+```{r,cache=TRUE}
+cnetplot(GO_result,
+         showCategory = 30)
+
+```
+
+```{r}
+install.packages("pheatmap")
+library(pheatmap)
+```
+
+```{r,cache=true}
+library(pheatmap)
+pheatmap(cor(countData),
+         annotation = colData,
+         cluster_cols = FALSE,
+         color = hcl.colors(50, "BluYl"))  # Corrected color argument
+
+```

@@ -1,0 +1,305 @@
+########################################
+# Program: needle
+# Rundate: Sun  6 Oct 2024 10:27:50
+# Commandline: needle
+#    -auto
+#    -stdout
+#    -asequence emboss_needle-I20241006-102745-0432-22489006-p1m.asequence
+#    -bsequence emboss_needle-I20241006-102745-0432-22489006-p1m.bsequence
+#    -datafile EDNAFULL
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -endopen 10.0
+#    -endextend 0.5
+#    -aformat3 pair
+#    -snucleotide1
+#    -snucleotide2
+# Align_format: pair
+# Report_file: stdout
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: NM_000249.4
+# 2: 2857093-2859654
+# Matrix: EDNAFULL
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 3263
+# Identity:    1390/3263 (42.6%)
+# Similarity:  1390/3263 (42.6%)
+# Gaps:        1470/3263 (45.1%)
+# Score: 1922.5
+# 
+#
+#=======================================
+
+NM_000249.4        1 -----------AG-ACGTTTCCTTGGCTCTTCTGGCGCCAAAATGTCGTT     38
+                                || |..||||            |.||||.|.|.|.|..|
+2857093-28596      1 ATGAGTGCAATAGAAAATTTC------------GACGCCCATACGCCCAT     38
+
+NM_000249.4       39 CGTG--GCAGGGGTTATTCGGCGGCTGGACGAGACAGTGGTGAA----CC     82
+                     ..||  ||||    |||       ||        ||| |.||||    |.
+2857093-28596     39 GATGCAGCAG----TAT-------CT--------CAG-GCTGAAAGCCCA     68
+
+NM_000249.4       83 GCATCGCGGCGGGGGAAGTTATCCAGCGG-----CCAGCTAATGCTATCA    127
+                     |||||.||        ||  ||||.||.|     ||.|   |||      
+2857093-28596     69 GCATCCCG--------AG--ATCCTGCTGTTTTACCGG---ATG------     99
+
+NM_000249.4      128 AAGAGATGATTGAGAACTGTTT-----AGATGCAAAATC------CACAA    166
+                      .|.|||..||..|||||||||     .||.|||||| |      |.|||
+2857093-28596    100 -GGTGATTTTTATGAACTGTTTTATGACGACGCAAAA-CGCGCGTCGCAA    147
+
+NM_000249.4      167 -------GTATT--------CAA-----GTGATT-GTTAAAGAGGGAG-G    194
+                            .||||        |||     |||.|| |     |.||||| |
+2857093-28596    148 CTGCTGGATATTTCACTGACCAAACGCGGTGCTTCG-----GCGGGAGAG    192
+
+NM_000249.4      195 CCTGAAGTTGATTCAGATCCAAGACAATGGCACCGGGAT-------CA--    235
+                     ||             |||||    |.||||  |.|||||       ||  
+2857093-28596    193 CC-------------GATCC----CGATGG--CGGGGATTCCCTACCATG    223
+
+NM_000249.4      236 ----GGAAAGAAGATCTGG--ATATTGTATGTGAA--AGGTTCACTACTA    277
+                         ||||| |..||||.|  |.|.||   |||||  |||        .|
+2857093-28596    224 CGGTGGAAA-ACTATCTCGCCAAACTG---GTGAATCAGG--------GA    261
+
+NM_000249.4      278 GTAAACTGCAGTCCTTTGAGGATTTAGCCAGTATTTCTACCTA-----TG    322
+                     |        |||||.||         ||||     |||.|..|     ||
+2857093-28596    262 G--------AGTCCGTT---------GCCA-----TCTGCGAACAAATTG    289
+
+NM_000249.4      323 GCTTTCGAGGTGAGGCTTTGGCCAGCA----------TAAGC-CA----T    357
+                     ||      |.|..|||   |.||||||          |.||| ||    |
+2857093-28596    290 GC------GATCCGGC---GACCAGCAAAGGTCCGGTTGAGCGCAAAGTT    330
+
+NM_000249.4      358 GTGGCTCAT-GTTACTATTACAACGAA--AACAGCTGATGGAAAG---TG    401
+                     || ||..|| |||||    .|.|.|.|  |.|||| ||||  |||   ||
+2857093-28596    331 GT-GCGTATCGTTAC----GCCAGGCACCATCAGC-GATG--AAGCCCTG    372
+
+NM_000249.4      402 -TGCATACAGAGCAAGTTACTCAGATGGA-AAACTGAAAGCCCCTCCTAA    449
+                      ||||   .||||  ||.|       ||| ||.|||...||..||     
+2857093-28596    373 TTGCA---GGAGC--GTCA-------GGACAACCTGCTGGCGGCT-----    405
+
+NM_000249.4      450 ACCATGTGCTGGCA----ATCAAGGG--------ACCCAGATCACGGTGG    487
+                        ||   ||||||    |.|||.||        ||.|    .|||.|||
+2857093-28596    406 ---AT---CTGGCAGGACAGCAAAGGTTTCGGCTACGC----GACGCTGG    445
+
+NM_000249.4      488 A----------GGACCTTTT-----------------TTAC-----AAC-    504
+                     |          ||.|.||||                 |.||     ||| 
+2857093-28596    446 ATATCAGTTCCGGGCGTTTTCGCCTGAGCGAACCGGCTGACCGCGAAACG    495
+
+NM_000249.4      505 ATAGCCACGAGG-AGAAAAGCTTTAAAA------AATCCAAGTGAAGAA-    546
+                     ||.||     || ||||..||     ||      |||||   ||..||| 
+2857093-28596    496 ATGGC-----GGCAGAACTGC-----AACGCACTAATCC---TGCGGAAC    532
+
+NM_000249.4      547 -----TATG-GGAAAATTTTG--GAA--GTTGTTGGCAGGTATTCAGTAC    586
+                          |||| .|||.||||||  |||  ||.|||                
+2857093-28596    533 TGCTGTATGCAGAAGATTTTGCTGAAATGTCGTT----------------    566
+
+NM_000249.4      587 ACAA-TGCAGGCATTAG--------------------TTTCTCAGTTAAA    615
+                       || ||.||||..|.|                    |.|...||||..|
+2857093-28596    567 --AATTGAAGGCCGTCGCGGCCTGCGCCGTCGCCCGCTGTGGGAGTTTGA    614
+
+NM_000249.4      616 AA---ACAAGGAGAGACAGTAGCTGA---TG----TTAGGACACTACCCA    655
+                     ||   |||..|.|.|.|||.||.|||   ||    ||.||||        
+2857093-28596    615 AATCGACACCGCGCGCCAGCAGTTGAATCTGCAATTTGGGAC--------    656
+
+NM_000249.4      656 ATGCCTCAACCGTGGACAATATTCGCTCCATCTTTGGAAATGCTGTTAGT    705
+                        ||.|.|.| |||       |||.|     |||||          .||
+2857093-28596    657 ---CCGCGATC-TGG-------TCGGT-----TTTGG----------CGT    680
+
+NM_000249.4      706 CGAGAA----CTGATAGAAATTGGATGTGAGGATAAAACCCTAGCC----    747
+                     ||||||    |.|...|.|.||   ||||           || |||    
+2857093-28596    681 CGAGAACGCGCCGCGCGGACTT---TGTG-----------CT-GCCGGTT    715
+
+NM_000249.4      748 ------TTCAAAAT--GAATGGTTACATATCCAATGCAAACTACTCAGTG    789
+                           |.||..||  |||     |.|||.||||  |..||.||||.|  
+2857093-28596    716 GTCTGTTGCAGTATGCGAA-----AGATACCCAA--CGTACGACTCTG--    756
+
+NM_000249.4      790 AAGAAGTGCATCTTCTTACTCTTCATCAACCATCGTCTGGTAGAATCAAC    839
+                          ..||||.|||.|    |.|||| ||||     |||.|        
+2857093-28596    757 -----CCGCATATTCGT----TCCATC-ACCA-----TGGAA--------    783
+
+NM_000249.4      840 TTCCTTG---AGAAAAGC--CA-TAGAAACAGTGTATGCAGCCTATTTGC    883
+                        |.||   ||.|.|||  || ||       ||.||||.||        
+2857093-28596    784 ---CGTGAGCAGGACAGCATCATTA-------TGGATGCCGC--------    815
+
+NM_000249.4      884 CCAAAAACACACACCCATTCCTGTACCTCAGTTTAGAAATCAGTCCCCAG    933
+                                .||.|.|        |..|.|.|.|||||||   |||||
+2857093-28596    816 -----------GACGCGT--------CGTAATCTGGAAATCA---CCCAG    843
+
+NM_000249.4      934 AATGTGGATGTTAATGTGCACCCCACAAAGCATGAAGTTCACTTC-----    978
+                     ||..|||..|.|..||.|.|      |||    .|.|.|..||||     
+2857093-28596    844 AACCTGGCGGGTGGTGCGGA------AAA----TACGCTGGCTTCTGTGC    883
+
+NM_000249.4      979 ----CTGCA---------CGA-GGAGAGC---ATCCTGGAGC---GGGTG   1008
+                         |||||         ||| ||..|||   ||.|||.|.|   ||.||
+2857093-28596    884 TCGACTGCACCGTCACGCCGATGGGCAGCCGTATGCTGAAACGCTGGCTG    933
+
+NM_000249.4     1009 CAGCAGCACA----------------------TCGAG----AGCAAGCTC   1032
+                     ||...|| ||                      |.|||    |||||.||.
+2857093-28596    934 CATATGC-CAGTGCGCGATACCCGCGTGTTGCTTGAGCGCCAGCAAACTA    982
+
+NM_000249.4     1033 CTGG-GCTCCAATTCCTCCAGGATGTACTTCACC---------CAGACTT   1072
+                     .||| ||    ||   |.||||||    ||||||         |||.|..
+2857093-28596    983 TTGGCGC----AT---TGCAGGAT----TTCACCGCCGGGCTACAGCCGG   1021
+
+NM_000249.4     1073 TGCTAC--CAG------GACTTG---------CTGGCCCCTCTGGGGAGA   1105
+                     |.||.|  |||      |||.||         |||||.|.|||||     
+2857093-28596   1022 TACTGCGTCAGGTCGGCGACCTGGAACGTATTCTGGCACGTCTGG-----   1066
+
+NM_000249.4     1106 TGGTTA--AA----TCCACAACAAG-TCTGACCTCGT----------CTT   1138
+                      ..|||  ||    ||..|.||..| ||||.|| |||          |||
+2857093-28596   1067 -CTTTACGAACTGCTCGCCCACGCGATCTGGCC-CGTATGCGCCACGCTT   1114
+
+NM_000249.4     1139 -----CTACTTCTGGA--------AGTAGT--GATAAGGTCTAT-GCCCA   1172
+                          |.|||.|.|||        .|.|||  ||.|..|||.|| |..||
+2857093-28596   1115 TCCAGCAACTGCCGGAGCTGCGTGCGCAGTTAGAAACTGTCGATAGTGCA   1164
+
+NM_000249.4     1173 CC--------------------AGATGGTTCGTACAGATTCCCGGGAACA   1202
+                     ||                    |||||| .||   ||.||.|||      
+2857093-28596   1165 CCGGTACAGGCGCTACGTGAGAAGATGG-GCG---AGTTTGCCG------   1204
+
+NM_000249.4     1203 GAAGCTTGATGC---AT-TTCTGCAGCCTCTGAGCAAACCCCTGTCCAGT   1248
+                       |||    |||   || |.|||.|||    ||||||.|    .||.|..
+2857093-28596   1205 --AGC----TGCGCGATCTGCTGGAGC----GAGCAATC----ATCGACA   1240
+
+NM_000249.4     1249 CAGCCCC---------AGGCCA--------TTGTCACAGAGG---ATAA-   1277
+                     ||.|.||         |.||.|        ||.||.||..||   |||| 
+2857093-28596   1241 CACCGCCGGTGCTGGTACGCGACGGTGGTGTTATCGCATCGGGCTATAAC   1290
+
+NM_000249.4     1278 GACAGATATTTCT-----AGTGGCAG------GGCT--AGGCAGCAA--G   1312
+                     || |||    .||     |||||| |      ||||  .||| ||.|  |
+2857093-28596   1291 GA-AGA----GCTGGATGAGTGGC-GCGCGCTGGCTGACGGC-GCGACCG   1333
+
+NM_000249.4     1313 AT------GAG-------------GAGATGCTTGAAC-TCCCAGCC----   1338
+                     ||      |||             |.|| ||.||||| |.||.|||    
+2857093-28596   1334 ATTATCTGGAGCGTCTGGAAGTCCGCGA-GCGTGAACGTACCGGCCTGGA   1382
+
+NM_000249.4     1339 CCTGCTGAA--GTGGCT---------------GCCA-------AAAATCA   1364
+                     |..||||||  .|||||               ||.|       .||||||
+2857093-28596   1383 CACGCTGAAAGTTGGCTTTAATGCGGTGCACGGCTACTACATTCAAATCA   1432
+
+NM_000249.4     1365 GAGCTTGGAGGGGGATACAACAAAG------GGGA--CTTCA--GAAAT-   1403
+                     |...|.||            |||||      ||.|  |.|||  .|.|| 
+2857093-28596   1433 GCCGTGGG------------CAAAGCCATCTGGCACCCATCAACTACATG   1470
+
+NM_000249.4     1404 ----GTCAGA----GAA-------GAGAGGACCTAC----TTCCAGCAAC   1434
+                         |.||||    |||       |||.|   ||||    ||||||    
+2857093-28596   1471 CGTCGCCAGACGCTGAAAAACGCCGAGCG---CTACATCATTCCAG----   1513
+
+NM_000249.4     1435 CCCAG---AAAGAG-ACATCGGGAAGA-----TTCTGATGTGGAAATGGT   1475
+                        ||   |||||| ||     |||||     ||||.|            
+2857093-28596   1514 ---AGCTAAAAGAGTAC-----GAAGATAAAGTTCTCA------------   1543
+
+NM_000249.4     1476 GGAAGATGATTCC-CGAAAGG-AAATGACTG------------CAGCTTG   1511
+                                || |.||||| |||..||||            |||||| 
+2857093-28596   1544 -----------CCTCAAAAGGCAAAGCACTGGCACTGGAAAAACAGCTT-   1581
+
+NM_000249.4     1512 TACCCCCCGGAGAAG-GATCATTAACCTCACTAG-TGTTTTGAGTCTC--   1557
+                     ||        .|||| |.|..|..||||     | ||||    |.|.|  
+2857093-28596   1582 TA--------TGAAGAGCTGTTCGACCT-----GCTGTT----GCCGCAT   1614
+
+NM_000249.4     1558 CAGGAAGAAATTAATGAGCAGGGACATGAGGTTCTCCGGGA----GATGT   1603
+                     |.|||||...|      |||   ||| |||      ||.||    |.|| 
+2857093-28596   1615 CTGGAAGCGTT------GCA---ACA-GAG------CGCGAGCGCGCTG-   1647
+
+NM_000249.4     1604 TGCATAACCACTCCTTCG-TGGGCTGTGTGAATCCTCAGTGGGCCTTGGC   1652
+                      ||..|||       ||| .|.|||| ||.|| |||     |||   ||.
+2857093-28596   1648 -GCGGAAC-------TCGACGTGCTG-GTTAA-CCT-----GGC---GGA   1679
+
+NM_000249.4     1653 ACAGCATCAAACCAAGTTATACCTTCTCAACACCA-----CCAAGCTT-A   1696
+                     ||.|      .||    ||||||  ||.|||..||     ||.|.||| |
+2857093-28596   1680 ACGG------GCC----TATACC--CTGAACTACACCTGCCCGACCTTCA   1717
+
+NM_000249.4     1697 GTGAAGAACTG----TTC----TACCAGA---------------------   1717
+                     .|||..|||.|    |||    |||| ||                     
+2857093-28596   1718 TTGATAAACCGGGCATTCGCATTACC-GAAGGTCGCCATCCGGTAGTTGA   1766
+
+NM_000249.4     1718 -----TACT--------CATTTA------------TGATTTTG-------   1735
+                          ||||        ||||||            |||.|.||       
+2857093-28596   1767 ACAAGTACTGAATGAGCCATTTATCGCCAACCCGCTGAATCTGTCGCCGC   1816
+
+NM_000249.4     1736 -----CCAATTTTGGTGTTCTCAGGT------------------------   1756
+                          |..||.|||.|..||.|.|||                        
+2857093-28596   1817 AGCGCCGCATGTTGATCATCACCGGTCCGAACATGGGCGGTAAAAGTACC   1866
+
+NM_000249.4     1757 TATCGGAGCCAGCACCGCTCTTTGACCTTGCCATGCTTGCCTTAGAT---   1803
+                     |||..|.||||| |||||.|  |||  ||||..||.|.||| ||.||   
+2857093-28596   1867 TATATGCGCCAG-ACCGCAC--TGA--TTGCGCTGATGGCC-TACATCGG   1910
+
+NM_000249.4     1804 ---------------------AGTCCAGAGAGTGG---------------   1817
+                                          ||||  ||||.|||               
+2857093-28596   1911 CAGCTATGTACCGGCACAAAAAGTC--GAGATTGGACCTATCGATCGCAT   1958
+
+NM_000249.4     1818 CTGGAC---------AGAGGAAGATG-------GTCCCAAAGAAGGACTT   1851
+                     ||..||         .|.||.|||||       ||||       ||.|  
+2857093-28596   1959 CTTTACCCGCGTAGGCGCGGCAGATGACCTGGCGTCC-------GGGC--   1999
+
+NM_000249.4     1852 GCTGAA--TACATTGTTGAG-TTTCTGAAGAAGAAGGCTGAGATGCTTGC   1898
+                     |||.||  |..||.||.||| |..|||||    |..||..|.|| .||.|
+2857093-28596   2000 GCTCAACCTTTATGGTGGAGATGACTGAA----ACCGCCAATAT-TTTAC   2044
+
+NM_000249.4     1899 AGA-------CTATTTCTCTTTGG---AAATTGATGA-----GGAAGGGA   1933
+                     |.|       |.|.|.|..|.|||   .|||.|||||     ||...|||
+2857093-28596   2045 ATAACGCCACCGAATACAGTCTGGTGTTAATGGATGAGATCGGGCGTGGA   2094
+
+NM_000249.4     1934 ACCTGATTGGATTACC-CCTTCTGATTGACAACTATGTGCCCCCTTTGGA   1982
+                     ||.|          || |||.| |||.|     |.|||   |.||...|.
+2857093-28596   2095 ACGT----------CCACCTAC-GATGG-----TCTGT---CGCTGGCGT   2125
+
+NM_000249.4     1983 GGGACTGCCTATCTTCATTCTTCGACTAGCCACTGAGGTGAAT-TGGGAC   2031
+                     |||..|||                          |.||..||| |||  |
+2857093-28596   2126 GGGCGTGC--------------------------GCGGAAAATCTGG--C   2147
+
+NM_000249.4     2032 GAAGAA----AAGGAATGTTTTGAAAGCCTCAGTAAAGAATGCGCTATGT   2077
+                     |||.||    ||||.|    ||||                  ||.|||.|
+2857093-28596   2148 GAATAAGATTAAGGCA----TTGA------------------CGTTATTT   2175
+
+NM_000249.4     2078 TCTATTCCATCCGGAAGCAGTACATATCTGAGGAGTCGACCCTCTCAGGC   2127
+                     .|||  ||         ||.|  ||.||    |||..|||||..|.|  |
+2857093-28596   2176 GCTA--CC---------CACT--ATTTC----GAGCTGACCCAGTTA--C   2206
+
+NM_000249.4     2128 C--AGCAGAGTGAAGTGCCTGGC-----TCCATTCCAAACTCCTGGAAGT   2170
+                     |  ||.|.|..|||| ||.|.||     |.|||         ||.||  |
+2857093-28596   2207 CGGAGAAAATGGAAG-GCGTCGCTAACGTGCAT---------CTCGA--T   2244
+
+NM_000249.4     2171 GGACTGTGGAACACATTGTCTATAAAGCCTTGCGCTCACA-CATTCTGCC   2219
+                     |.||  ||||.|||                .|||   ||| |||  ||||
+2857093-28596   2245 GCAC--TGGAGCAC----------------GGCG---ACACCAT--TGCC   2271
+
+NM_000249.4     2220 TCCTAAACATTTCACAG-----AAGATGG-----------AAATAT----   2249
+                     | .||     |.|||||     |.|||||           |||..|    
+2857093-28596   2272 T-TTA-----TGCACAGCGTGCAGGATGGCGCGGCGAGCAAAAGCTACGG   2315
+
+NM_000249.4     2250 CCTGCAGCTTGCTAACCTGCCTGATCTATACAAAGTCTTTGAGAGGTGT-   2298
+                     ||||..|.||||                     || ||.||..|||.|| 
+2857093-28596   2316 CCTGGCGGTTGC---------------------AG-CTCTGGCAGGCGTG   2343
+
+NM_000249.4     2299 --TAAATATGGTTATTTA---TGCA---------CTGTGGGATGTG----   2330
+                       .|||.| |||||||.|   .|||         |||.|.||..||    
+2857093-28596   2344 CCAAAAGA-GGTTATTAAGCGCGCACGGCAAAAGCTGCGTGAGCTGGAAA   2392
+
+NM_000249.4     2331 ----TTCTTCTTTCTCTGTATTCCGATAC-AAAGTG--TTGTA-TCAAAG   2372
+                         |||..|...|.|.|    |||.||| .|||||  |.||| .|||| 
+2857093-28596   2393 GCATTTCGCCGAACGCCG----CCGCTACGCAAGTGGATGGTACGCAAA-   2437
+
+NM_000249.4     2373 TG----TGATATACAAAGTGTACCAACATAA---------GTGTTGGTAG   2409
+                     ||    ||.|.| ||    ||||||..|.||         |.|.|.|.||
+2857093-28596   2438 TGTCTTTGCTGT-CA----GTACCAGAAGAAACTTCGCCTGCGGTCGAAG   2482
+
+NM_000249.4     2410 CACTTAAGACTTATACTTG--CCTTCTGATAGTATTC-CTTTATACAC--   2454
+                     |.||..|.|.|    ||||  ||        |.|||| ||     |||  
+2857093-28596   2483 CTCTGGAAAAT----CTTGATCC--------GGATTCACT-----CACCC   2515
+
+NM_000249.4     2455 ---------------AGTGGATT----GATTATAAATAAATAGATGTGTC   2485
+                                    ||||||||    |.||           ||.|.|.|
+2857093-28596   2516 CGCGTCAGGCGCTGGAGTGGATTTATCGCTT-----------GAAGAGCC   2554
+
+NM_000249.4     2486 T----TAACATAA   2494
+                     |    |||     
+2857093-28596   2555 TGGTGTAA-----   2562
+
+
+#---------------------------------------
+#---------------------------------------

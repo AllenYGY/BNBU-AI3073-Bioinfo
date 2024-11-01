@@ -1,0 +1,14 @@
+BiocGenerics
+S4Vectors
+IRanges
+GenomeInfoDb
+GenomicRanges
+matrixStats
+MatrixGenerics
+Biobase
+SummarizedExperiment
+DESeq2
+clusterProfiler
+AnnotationDbi
+org.Hs.eg.db
+pheatmap
