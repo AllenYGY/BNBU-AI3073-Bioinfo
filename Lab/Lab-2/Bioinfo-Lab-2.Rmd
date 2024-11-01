@@ -4,6 +4,14 @@ output: pdf_document
 
 # Lab-2
 
+## Environment Setup
+
+```{r,cache=TRUE}
+install.packages("BiocManager")
+BiocManager::install(c("S4Vectors", "IRanges", "GenomicRanges", "SummarizedExperiment", 
+                       "BiocGenerics", "Biobase", "BiocParallel", "matrixStats", "locfit", "ggplot2"))
+```
+
 ## Load Dataset
 
 In this step, we load the raw counts and sample mapping data for further analysis.
@@ -85,8 +93,4 @@ pheatmap(cor(countData),
          annotation = colData,
          cluster_cols = FALSE,
          color = hcl.colors(50, "BluYl"))  # Adjust color for heatmap
-```
-
-```{r}
-library(rmarkdown)
 ```
