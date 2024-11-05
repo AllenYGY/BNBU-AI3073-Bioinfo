@@ -27,7 +27,7 @@ void write(int x){
 }
  
 void solve(){
-    string B="GATCAGATCGA",A="GGTAACGT";
+    string B="GGATGCA",A="GTCATCA";
     vector<vector<int>> dp(A.size()+1,vector<int>(B.size()+1,0));
     int match=5,mismatch=-2,penality=-6;
     for(int j=0;j<=B.size();j++){
