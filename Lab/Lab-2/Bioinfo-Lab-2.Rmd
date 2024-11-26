@@ -12,7 +12,7 @@ BiocManager::install(c("S4Vectors", "IRanges", "GenomicRanges", "SummarizedExper
                        "BiocGenerics", "Biobase", "BiocParallel", "matrixStats", "locfit", "ggplot2"))
 ```
 
-## Load Dataset
+## 1. Load Dataset
 
 In this step, we load the raw counts and sample mapping data for further analysis.
 
@@ -30,7 +30,7 @@ colData <- data.frame(condition = sampleData$Sample.Characteristic.biopsy.site.)
 rownames(colData) <- sampleData$Run
 ```
 
-## Differential Expression Analysis using DESeq2
+## 2. Differential Expression Analysis using DESeq2
 
 Read the DESeq2 manual for reference: DESeq2 Manual
 
@@ -56,7 +56,7 @@ DE_genes <- subset(res, padj < 0.05)
 write.csv(as.data.frame(DE_genes), file = "DE_genes.csv")  # Save as .csv
 ```
 
-## Gene Set Enrichment Analysis
+## 3. Gene Set Enrichment Analysis
 
 Identify functional enrichment of the DE genes using clusterProfiler and org.Hs.eg.db packages.
 
@@ -64,6 +64,7 @@ Identify functional enrichment of the DE genes using clusterProfiler and org.Hs.
 # Load necessary libraries
 library(clusterProfiler)
 library(org.Hs.eg.db)
+library(ggplot2)
 
 # Gene set enrichment analysis
 gene_id_list <- rownames(DE_genes)
@@ -75,12 +76,29 @@ GO_result <- enrichGO(gene_id_list,
                       keyType = 'ENSEMBL')
 
 # Plotting gene set enrichment results
-dotplot(GO_result, x = "GeneRatio", color = "p.adjust", showCategory = 20, title = "Gene Ontology Dotplot")
-barplot(GO_result, x = "GeneRatio", color = "p.adjust", showCategory = 20, title = "Gene Ontology Barplot")
+dotplot(GO_result, x = "GeneRatio", color = "p.adjust", showCategory = 10, title = "Gene Ontology Dotplot") +
+  theme(axis.text.y = element_text(size = 8))
+
+barplot(GO_result, x = "GeneRatio", color = "p.adjust", showCategory = 10, title = "Gene Ontology Barplot") +
+  theme(axis.text.y = element_text(size = 8))
+
 cnetplot(GO_result, showCategory = 10)
 ```
 
-## Hierarchical Clustering and Heatmap
+### Results
+
+The results of your gene set enrichment analysis (GSEA) for the differentially expressed (DE) genes between tumor and normal samples provide insights into the biological processes that are significantly associated with the observed differences.
+
+The dot plot and bar plot you generated highlight the top enriched Gene Ontology (GO) terms based on the adjusted p-value (p.adjust). The size of each point in the dot plot represents the count of genes associated with each GO term, while the color gradient shows the level of significance, with red representing the most significant terms. In both plots, terms related to metabolic processes, particularly those involved in amino acid and small molecule metabolism, are prominently enriched.
+
+1.  Metabolic Processes: Many of the significant GO terms, such as “small molecule catabolic process,” “steroid metabolic process,” and “amino acid metabolic process,” suggest that metabolic reprogramming may play a crucial role in differentiating tumor cells from normal cells. This is consistent with the well-known phenomenon of altered metabolism in cancer cells, often referred to as the “Warburg effect.”
+2.  Catabolic Processes: Processes like “organic acid catabolic process” and “alpha-amino acid catabolic process” are enriched, indicating that these pathways might be more active in tumor cells, possibly to meet the high energy and biosynthetic demands of rapidly proliferating cells.
+
+The GSEA results support the idea that tumor cells may have a distinct metabolic profile compared to normal cells, potentially highlighting pathways that could be targeted for therapeutic intervention.
+
+![rOV8OR](https://cdn.jsdelivr.net/gh/AllenYGY/ImageSpace@main/uPic/rOV8OR.png) ![JjjaVo](https://cdn.jsdelivr.net/gh/AllenYGY/ImageSpace@main/uPic/JjjaVo.png) ![dWrsUs](https://cdn.jsdelivr.net/gh/AllenYGY/ImageSpace@main/uPic/dWrsUs.png)
+
+## 4. Hierarchical Clustering and Heatmap
 
 Apply hierarchical clustering to genes and generate a heatmap.
 
