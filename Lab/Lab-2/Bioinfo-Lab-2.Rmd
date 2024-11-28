@@ -91,8 +91,8 @@ The results of your gene set enrichment analysis (GSEA) for the differentially e
 
 The dot plot and bar plot you generated highlight the top enriched Gene Ontology (GO) terms based on the adjusted p-value (p.adjust). The size of each point in the dot plot represents the count of genes associated with each GO term, while the color gradient shows the level of significance, with red representing the most significant terms. In both plots, terms related to metabolic processes, particularly those involved in amino acid and small molecule metabolism, are prominently enriched.
 
-1.  Metabolic Processes: Many of the significant GO terms, such as “small molecule catabolic process,” “steroid metabolic process,” and “amino acid metabolic process,” suggest that metabolic reprogramming may play a crucial role in differentiating tumor cells from normal cells. This is consistent with the well-known phenomenon of altered metabolism in cancer cells, often referred to as the “Warburg effect.”
-2.  Catabolic Processes: Processes like “organic acid catabolic process” and “alpha-amino acid catabolic process” are enriched, indicating that these pathways might be more active in tumor cells, possibly to meet the high energy and biosynthetic demands of rapidly proliferating cells.
+1. Metabolic Processes: Many of the significant GO terms, such as “small molecule catabolic process,” “steroid metabolic process,” and “amino acid metabolic process,” suggest that metabolic reprogramming may play a crucial role in differentiating tumor cells from normal cells. This is consistent with the well-known phenomenon of altered metabolism in cancer cells, often referred to as the “Warburg effect.”
+2. Catabolic Processes: Processes like “organic acid catabolic process” and “alpha-amino acid catabolic process” are enriched, indicating that these pathways might be more active in tumor cells, possibly to meet the high energy and biosynthetic demands of rapidly proliferating cells.
 
 The GSEA results support the idea that tumor cells may have a distinct metabolic profile compared to normal cells, potentially highlighting pathways that could be targeted for therapeutic intervention.
 
