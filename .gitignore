@@ -3,3 +3,6 @@
 *bin
 *.cph
 *.zip
+*.csv
+*.xlsx
+*.txt
