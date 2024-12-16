@@ -1,6 +1,6 @@
 def global_alignment():
-    B = "GATCAGATCGA"
-    A = "GGTAACGT"
+    B = "GATTA"
+    A = "GGATC"
     dp = [[0] * (len(B) + 1) for _ in range(len(A) + 1)]
     match = 5
     mismatch = -2
