@@ -1,1 +1,1 @@
-# Bioninformatics Course Material 
+# Bioinformatics Course Material 
