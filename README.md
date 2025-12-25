@@ -1,1 +1,1 @@
-# UIC Bioninfo Course Material 
+# Bioninformatics Course Material 
